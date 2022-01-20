@@ -29,7 +29,7 @@ namespace ShowInvoice
             _appCache = appCache;
 
             JsonRead<User> userRead = new JsonRead<User>();
-            users = userRead.Read(@"C:\Users\user\source\repos\ShowInvoice\Data\users.json");
+            users = _userRepo.GetAll();
             InitializeComponent();
         }
 
@@ -54,17 +54,6 @@ namespace ShowInvoice
             {
                 MessageBox.Show("Invalis user");
             }
-
-
-            //JsonRead<User> userRead = new JsonRead<User>();
-            //JsonRead<Product> productRead = new JsonRead<Product>();
-            //JsonRead<Invoice> invoiceRead = new JsonRead<Invoice>();
-            //JsonRead<Invoiceline> invoiceLineRead = new JsonRead<Invoiceline>();
-
-            //List<User> users = userRead.Read(@"C:\Users\user\source\repos\ShowInvoice\Data\users.json");
-            //List<Product> products = productRead.Read(@"C:\Users\user\source\repos\ShowInvoice\Data\products.json");
-            //List<Invoice> invoices = invoiceRead.Read(@"C:\Users\user\source\repos\ShowInvoice\Data\invoices.json");
-            //List<Invoiceline> invoicelines = invoiceLineRead.Read(@"C:\Users\user\source\repos\ShowInvoice\Data\invoicelines.json");
         }
     }
 }

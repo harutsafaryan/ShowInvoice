@@ -28,7 +28,7 @@ namespace ShowInvoice.Mappers
 
                 invoiceMappers.Add(new InvoiceViewModel()
                 {
-                    //InvoiceId = item.InvoiceId,
+                    InvoiceId = item.InvoiceId,
                     Name = item.Name,
                     PaidDate = item.PaidDate,
                     TotalAmount = sum

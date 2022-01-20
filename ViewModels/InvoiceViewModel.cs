@@ -8,7 +8,7 @@ namespace ShowInvoice.ViewModels
 {
     public class InvoiceViewModel
     {
-        //public Guid InvoiceId { get; set; }
+        public Guid InvoiceId { get; set; }
         public string Name { get; set; }
         public DateTime PaidDate { get; set; }
         public int TotalAmount { get; set; }

@@ -40,15 +40,13 @@ namespace ShowInvoice.Forms
             List<Product> products = _productRepo.GetAll();
 
             grdInvoices.DataSource = invoices.MapInvoiceToVoewModel(_invoicelineRepo.GetAll(), _productRepo.GetAll());
-
-            base.OnLoad(e);
         }
         
         private void grdInvoices_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            Guid guid = (Guid)grdInvoices.Rows[e.RowIndex].Cells["InvoiceId"].Value;
             List<Product> products = _productRepo.GetAll();
-            Guid guid = Guid.Parse("e57a082b-f835-402b-a7c4-baf9ebb42483");
-            grdProducts.DataSource = products.MapProductToVoewModel(guid , _invoicelineRepo.GetAll());
+            grdProducts.DataSource = products.MapProductToVoewModel(guid, _invoicelineRepo.GetAll());
         }
     }
 }

@@ -25,10 +25,10 @@ namespace ShowInvoice.Mappers
 
                         productMappers.Add(new ProductViewModel()
                         {
-                           Name = product.Name,
-                           Price = product.Price,
-                           Quantity = item.Quantity,
-                           TotalAmount = product.Price * item.Quantity
+                            Name = product.Name,
+                            Price = product.Price,
+                            Quantity = item.Quantity,
+                            TotalAmount = product.Price * item.Quantity
                         });
                     }
             }

@@ -18,7 +18,7 @@ namespace ShowInvoice.Repo
 
         public List<Invoice> GetAll()
         {
-            return _invoiceJson.Read(@"C:\Users\user\source\repos\ShowInvoice\Data\invoices.json");
+            return _invoiceJson.Read("invoices.json");
         }
     }
 }
