@@ -40,6 +40,7 @@ namespace ShowInvoice.Forms
             List<Product> products = _productRepo.GetAll();
 
             grdInvoices.DataSource = invoices.MapInvoiceToVoewModel(_invoicelineRepo.GetAll(), _productRepo.GetAll());
+            grdInvoices.Columns["InvoiceId"].Visible = false;
         }
         
         private void grdInvoices_CellClick(object sender, DataGridViewCellEventArgs e)
