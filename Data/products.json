@@ -1,0 +1,17 @@
+[
+    {
+      "ProductId": "8dfb1c32-c8ac-4487-bf44-833bcce3d80f",
+      "Name": "Pepsi",
+      "Price": 25
+    },
+    {
+      "ProductId": "5b63ac19-9e18-47ad-ab94-30d3ebbf10e2",
+      "Name": "Cola",
+      "Price": 30
+    },
+    {
+      "ProductId": "cb43d93c-2ef4-440c-bfd9-2ab02c6292eb",
+      "Name": "Fanta",
+      "Price": 27
+    }
+  ]

@@ -1,0 +1,12 @@
+[
+  {
+    "UserId": "9ee22408-3101-454d-ade8-1fc9a1f90ee9",
+    "Name": "User1",
+    "Password": "A123!"
+  },
+  {
+    "UserId": "673a8f35-dbda-4fd5-952d-ceb9bf2d57c5",
+    "Name": "User2",
+    "Password": "A234!"
+  }
+]
