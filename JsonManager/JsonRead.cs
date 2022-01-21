@@ -18,13 +18,6 @@ namespace ShowInvoice.JsonManager
                 List<T> items = (List<T>)serializer.Deserialize(file, typeof(List<T>));
                 return items;
             }
-
-            //using (FileStream stream = new FileStream(filename, FileMode.OpenOrCreate))
-            //{
-            //    List<T> items = JsonSerializer.Deserialize<List<T>>(stream);
-            //    return items;
-            //}
-
         }
     }
 }

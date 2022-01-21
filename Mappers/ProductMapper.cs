@@ -12,25 +12,20 @@ namespace ShowInvoice.Mappers
     {
         public static List<ProductViewModel> MapProductToVoewModel(this List<Product> products, Guid invoiceId, List<Invoiceline> invoicelines)
         {
-            List<Product> takenProducts = new List<Product>();
-            List<ProductViewModel> productMappers = new List<ProductViewModel>(invoicelines.Where(l => l.InvoiceId == invoiceId).Count());
+            List<ProductViewModel> productMappers = new List<ProductViewModel>(invoicelines.Count());
 
+            Product temp = new Product();
             foreach (var item in invoicelines)
             {
-                if (item.InvoiceId == invoiceId)
-                    foreach (var product in products)
-                    {
-                        if (item.ProductId == product.ProductId)
-                            takenProducts.Add(product);
+                temp = products.FirstOrDefault(p => p.ProductId == item.ProductId);
 
-                        productMappers.Add(new ProductViewModel()
-                        {
-                            Name = product.Name,
-                            Price = product.Price,
-                            Quantity = item.Quantity,
-                            TotalAmount = product.Price * item.Quantity
-                        });
-                    }
+                productMappers.Add(new ProductViewModel()
+                {
+                    Name = temp.Name,
+                    Price = temp.Price,
+                    Quantity = item.Quantity,
+                    TotalAmount = temp.Price * item.Quantity
+                });
             }
             return productMappers;
         }

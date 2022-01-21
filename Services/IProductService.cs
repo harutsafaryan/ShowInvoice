@@ -7,5 +7,6 @@ namespace ShowInvoice.Services
     public interface IProductService
     {
         List<Product> GetProductsByInvoiceId(Guid id);
+        List<Product> GetAll();
     }
 }

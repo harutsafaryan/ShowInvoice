@@ -1,6 +1,12 @@
-﻿namespace ShowInvoice.Services
+﻿using ShowInvoice.Models;
+using System;
+using System.Collections.Generic;
+
+namespace ShowInvoice.Services
 {
-    public internal interface IInvoiceService
+    public interface IInvoiceService
     {
+        List<Invoice> GetInvoicesByUserId(Guid id);
+        List<Invoice> GetAll();
     }
 }

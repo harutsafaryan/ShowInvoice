@@ -19,6 +19,11 @@ namespace ShowInvoice.Services
             _invoiceLineRepo = invoicelineRepo;
         }
 
+        public List<Product> GetAll()
+        {
+            return _productRepo.GetAll();
+        }
+
         public List<Product> GetProductsByInvoiceId(Guid id)
         {
             List<Guid> productsId = _invoiceLineRepo.GetAll()

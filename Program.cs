@@ -3,6 +3,7 @@ using ShowInvoice.Cache;
 using ShowInvoice.Forms;
 using ShowInvoice.JsonManager;
 using ShowInvoice.Repo;
+using ShowInvoice.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,7 +40,8 @@ namespace ShowInvoice
 
             services.AddJsonRead()
                     .AddRepository()
-                    .AddScoped<LoginForm>()
+                    .AddServices()
+                    .AddSingleton<LoginForm>()
                     .AddScoped<InvoicesForm>();
         }
     }

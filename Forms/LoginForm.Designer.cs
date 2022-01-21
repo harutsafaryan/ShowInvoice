@@ -57,6 +57,7 @@ namespace ShowInvoice
             // 
             this.txtPassword.Location = new System.Drawing.Point(126, 86);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(157, 20);
             this.txtPassword.TabIndex = 2;
             // 
@@ -78,7 +79,7 @@ namespace ShowInvoice
             this.label2.TabIndex = 4;
             this.label2.Text = "password";
             // 
-            // Login
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -88,7 +89,7 @@ namespace ShowInvoice
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.btnLogin);
-            this.Name = "Login";
+            this.Name = "LoginForm";
             this.Text = "User login";
             this.ResumeLayout(false);
             this.PerformLayout();
