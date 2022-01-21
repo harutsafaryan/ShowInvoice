@@ -43,7 +43,7 @@ namespace ShowInvoice.Forms
             grdInvoices.Columns["InvoiceId"].Visible = false;
         }
 
-        private void grdInvoices_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void GrdInvoices_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             Guid guid = (Guid)grdInvoices.Rows[e.RowIndex].Cells["InvoiceId"].Value;
             List<Product> products = _productService.GetProductsByInvoiceId(guid);
@@ -55,7 +55,6 @@ namespace ShowInvoice.Forms
         {
             _appCache.ViewBag.Remove("userName");
             _appCache.ViewBag.Remove("userId");
-            Hide();
         }
     }
 }

@@ -30,7 +30,7 @@ namespace ShowInvoice
             InitializeComponent();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void BtnLogin_Click(object sender, EventArgs e)
         {
             bool isValidUser = false;
 
@@ -41,14 +41,15 @@ namespace ShowInvoice
                     isValidUser = true;
                     _appCache.ViewBag.Add("userId", user.UserId);
                     _appCache.ViewBag.Add("userName", user.Name);
-                    //txtUsername.Text = string.Empty;
-                    //txtPassword.Text = string.Empty;
+                    txtUsername.Text = string.Empty;
+                    txtPassword.Text = string.Empty;
                     break;
                 }
             }
             if (isValidUser)
             {
-                _invoicesForm.Show();
+                _invoicesForm.ShowDialog();
+                _invoicesForm.Activate();
             }
             else
             {

@@ -49,13 +49,13 @@ namespace ShowInvoice.Forms
             this.Name,
             this.PaidDate,
             this.TotalAmount});
-            this.grdInvoices.Location = new System.Drawing.Point(44, 64);
+            this.grdInvoices.Location = new System.Drawing.Point(44, 63);
             this.grdInvoices.Name = "grdInvoices";
             this.grdInvoices.ReadOnly = true;
             this.grdInvoices.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdInvoices.Size = new System.Drawing.Size(648, 150);
             this.grdInvoices.TabIndex = 0;
-            this.grdInvoices.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdInvoices_CellClick);
+            this.grdInvoices.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GrdInvoices_CellClick);
             // 
             // Name
             // 
@@ -124,7 +124,7 @@ namespace ShowInvoice.Forms
             // 
             this.lblUser.AutoSize = true;
             this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.Location = new System.Drawing.Point(666, 23);
+            this.lblUser.Location = new System.Drawing.Point(648, 23);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(0, 20);
             this.lblUser.TabIndex = 5;
@@ -152,7 +152,7 @@ namespace ShowInvoice.Forms
 
         private System.Windows.Forms.DataGridView grdInvoices;
         private System.Windows.Forms.DataGridView grdProducts;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private new System.Windows.Forms.DataGridViewTextBoxColumn Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn PaidDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalAmount;
         private System.Windows.Forms.Label lblInvoices;
