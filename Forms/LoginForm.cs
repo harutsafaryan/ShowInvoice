@@ -53,7 +53,7 @@ namespace ShowInvoice
             }
             else
             {
-                MessageBox.Show("Invalis user");
+                MessageBox.Show("Invalid user", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
