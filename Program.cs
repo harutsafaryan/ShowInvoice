@@ -41,7 +41,7 @@ namespace ShowInvoice
             services.AddJsonRead()
                     .AddRepository()
                     .AddServices()
-                    .AddSingleton<LoginForm>()
+                    .AddScoped<LoginForm>()
                     .AddScoped<InvoicesForm>();
         }
     }
